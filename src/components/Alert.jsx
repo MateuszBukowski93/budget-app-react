@@ -1,11 +1,7 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from "react";
 
-const Alert = () => {
-    return (
-        <>
-            Hello from Alert
-        </>
-    )
-}
+const Alert = ({ alert: { type, text } }) => {
+  return <div className={type}>{text}</div>;
+};
 
-export default Alert
+export default Alert;

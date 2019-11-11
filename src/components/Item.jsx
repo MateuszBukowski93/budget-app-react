@@ -3,9 +3,9 @@ import React from 'react'
 const Item = ({ item:{id, description, amount} }) => {
     return (
         <li>
-           
-            {description}
-            {amount}
+           <div className="">{description}
+            {amount}</div>
+            
         </li>
     )
 }

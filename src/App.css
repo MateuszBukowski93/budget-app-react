@@ -3,3 +3,12 @@
   padding: 0;
   
 }
+
+.danger{
+  width:100%;
+  background-color: red;
+}
+.success{
+  width:100%;
+  background-color: green;
+}
