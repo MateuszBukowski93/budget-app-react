@@ -120,7 +120,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app">
       {alert.show && <Alert alert={alert} />}
 
       <Form

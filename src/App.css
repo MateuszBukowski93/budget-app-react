@@ -1,14 +1,224 @@
-*{
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap");
+
+:root {
+  --primaryColor: rgb(11, 103, 207);
+  --whiteColor: rgb(253, 253, 253);
+  --blackColor: rgb(0, 0, 0);
+  --dangerColor: rgb(233, 62, 39);
+  --successColor: rgb(51, 153, 26);
+}
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
+  font-family: "Gochi Hand", cursive;
+  overflow: hidden;
+}
+body {
+  background-color: var(--primaryColor);
+}
+.app {
+  margin: 5rem auto;
+  padding: 2rem;
+  max-width: 80rem;
+  width: 90%;
+  background-color: var(--whiteColor);
+  border-radius: 5px;
+}
+.form {
+  display: flex;
+  padding: 0 1rem;
+}
+.form-group {
+  padding: 1rem 0.75rem;
+  flex: 0 0 50%;
+}
+label {
+  display: block;
+  color: var(--mainGrey);
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.form-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--primaryColor);
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
 }
 
-.danger{
-  width:100%;
-  background-color: red;
+.btn {
+  text-decoration: none;
+  color: var(--mainWhite);
+  background-color: var(--primaryColor);
+  text-align: center;
+  font-size: 1.2rem;
+  outline: 0;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  height: 2.5rem;
+  padding: 0.1rem 1rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
 }
-.success{
-  width:100%;
-  background-color: green;
+.btn:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.3rem) scale(1.05);
+}
+.btn-icon {
+  margin-left: 0.75rem;
+  font-size: 1.2rem;
+}
+.list {
+  margin: 2rem 0.75rem 0 0.75rem;
+  list-style-type: none;
+  border: none;
+  padding: 0;
+}
+.item {
+  background-color: var(--mainWhite);
+  line-height: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s linear;
+}
+.item:hover {
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.3rem);
+}
+.info {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.description {
+  margin-right: 2rem;
+  text-transform: capitalize;
+}
+.amount {
+  font-size: 1rem;
+  color: var(--mainWhite);
+  border-radius: 2px;
+}
+.outcome {
+  background-color: var(--dangerColor);
+  padding: 0.1rem .7rem;
+  border-radius: 5px;
+ 
+}
+.income {
+  background-color: var(--successColor);
+  padding: 0.1rem .7rem;
+  border-radius: 5px;
+  
+}
+.submit-btn {
+  margin-bottom: 1rem;
+}
+.clear-btn,
+.edit-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  outline: none;
+  cursor: pointer;
+}
+.clear-btn {
+  color: var(--dangerColor);
+}
+.edit-btn {
+  color: var(--successColor);
+}
+
+.alert {
+  padding: 1rem;
+  color: var(--colorWhite);
+  text-align: center;
+  text-transform: capitalize;
+  width: 80%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.alert-danger {
+  background: var(--dangerColor);
+}
+.alert-success {
+  background: var(--successColor);
+}
+.summary {
+  margin: 3rem auto 0;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+.balance {
+  font-size: 1.6rem;
+}
+.margin-bottom-small{
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 300px) {
+  .App,
+  .list,
+  .alert {
+    width: 85%;
+  }
+
+  .list {
+    margin: 2rem auto 0 auto;
+  }
+  .summary{
+    flex-direction: column;
+  }
+ 
+}
+@media screen and (min-width: 601px) {
+  .App,
+  .list,
+  .alert {
+    width: 85%;
+  }
+ 
+
+  .list {
+    margin: 2rem auto 0 auto;
+  }
+  .summary{
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 993px) {
+  .App,
+  .list,
+  .alert {
+    width: 70%;
+  }
+  .list {
+    margin: 2rem auto 0 auto;
+  }
+  .info {
+    flex: 0 0 50%;
+  }
 }
