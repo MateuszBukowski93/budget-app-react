@@ -27,7 +27,7 @@ const Form = ({
         <div className="form-group">
           <label htmlFor="amount">Amount</label>
           <input
-            type="text"
+            type="number"
             className="form-input"
             id="amount"
             name="amount"
