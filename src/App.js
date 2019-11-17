@@ -95,7 +95,7 @@ function App() {
   //to handle submit
   const handleSubmit = e => {
     e.preventDefault();
-    if (description !== "" && amount !== 0 && amount !== "") {
+    if (description !== "" && amount != 0 && amount != "") {
       if(edit){
         let temporaryBudgetItems = budgetItems.map(item=>{
           return item.id === id ? {...item, description, amount} : item
